@@ -1,3 +1,6 @@
 .stack-work/
 BattleShips.cabal
 *~
+dist/package.conf.inplace/package.cache
+dist/setup-config
+dist/package.conf.inplace/BattleShips-0.1.0.0-IkQ3voCRHb66HGiskby0vU.conf
