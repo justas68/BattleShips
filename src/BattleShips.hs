@@ -103,18 +103,18 @@ checkIfMoveValid message player (coord1, coord2) =
 checkIfNoSunkedShipsNear :: (Char, Int) -> [(String, String)] -> Bool
 checkIfNoSunkedShipsNear coords [] = False
 checkIfNoSunkedShipsNear (coord1, coord2) hits =
-  isItWholeShipUnderTheSea (succ coord1, coord2+1) hits ||
-  isItWholeShipUnderTheSea (pred coord1, coord2+1) hits ||
-  isItWholeShipUnderTheSea (coord1, coord2+1) hits ||
-  isItWholeShipUnderTheSea (succ coord1, coord2-1) hits ||
-  isItWholeShipUnderTheSea (pred coord1, coord2-1) hits ||
-  isItWholeShipUnderTheSea (coord1, coord2-1) hits ||
-  isItWholeShipUnderTheSea (succ coord1, coord2) hits ||
-  isItWholeShipUnderTheSea (pred coord1, coord2) hits
+  isItWholeShipUnderTheSea (mySucc 'J' coord1, mySucc 10 coord2) hits ||
+  isItWholeShipUnderTheSea (myPred 'A' coord1, mySucc 10 coord2) hits ||
+  isItWholeShipUnderTheSea (coord1, mySucc 10 coord2) hits ||
+  isItWholeShipUnderTheSea (mySucc 'J' coord1, myPred 1 coord2) hits ||
+  isItWholeShipUnderTheSea (myPred 'A' coord1, myPred 1 coord2) hits ||
+  isItWholeShipUnderTheSea (coord1, myPred 1 coord2) hits ||
+  isItWholeShipUnderTheSea (mySucc 'J' coord1, coord2) hits ||
+  isItWholeShipUnderTheSea (myPred 'A' coord1, coord2) hits
 
 isItWholeShipUnderTheSea :: (Char, Int) -> [(String, String)] -> Bool
 isItWholeShipUnderTheSea (coord1, coord2) hits =
-  isCoordInBoard (coord1, coord2) && ([coord1], show coord2) `elem` hits && checkIt (coord1, coord2) hits [(coord1, coord2)]
+  ([coord1], show coord2) `elem` hits && checkIt (coord1, coord2) hits [(coord1, coord2)]
       where
         checkIt :: (Char, Int) -> [(String, String)] -> [(Char, Int)] -> Bool
         checkIt coords hits counted =
@@ -122,9 +122,6 @@ isItWholeShipUnderTheSea (coord1, coord2) hits =
             x = findChain [coords] (map (\(coord1, coord2) -> (head coord1, read coord2 :: Int)) hits) []
           in
             (length x == 4)
-
-isCoordInBoard :: (Char, Int) -> Bool
-isCoordInBoard (coord1, coord2) = not (coord1 > 'I' || coord1 < 'A' || coord2 > 10 || coord2 < 1)
 
 connected p = map fst . filter ((<=1).snd) . map (liftA2 (,) id (dist p))
           where dist (a,x) (b,y) = (abs (fromEnum a - fromEnum b)) + (abs (y-x))
