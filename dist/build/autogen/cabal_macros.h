@@ -22,15 +22,15 @@
   (major1) == 4 && (major2) == 11 && (minor) <= 1)
 #endif /* MIN_VERSION_base */
 
-/* package aeson-1.4.0.0 */
+/* package aeson-1.4.1.0 */
 #ifndef VERSION_aeson
-#define VERSION_aeson "1.4.0.0"
+#define VERSION_aeson "1.4.1.0"
 #endif /* VERSION_aeson */
 #ifndef MIN_VERSION_aeson
 #define MIN_VERSION_aeson(major1,major2,minor) (\
   (major1) <  1 || \
   (major1) == 1 && (major2) <  4 || \
-  (major1) == 1 && (major2) == 4 && (minor) <= 0)
+  (major1) == 1 && (major2) == 4 && (minor) <= 1)
 #endif /* MIN_VERSION_aeson */
 
 /* package lens-4.17 */
@@ -54,6 +54,17 @@
   (major1) == 1 && (major2) <  1 || \
   (major1) == 1 && (major2) == 1 && (minor) <= 0)
 #endif /* MIN_VERSION_random */
+
+/* package HUnit-1.6.0.0 */
+#ifndef VERSION_HUnit
+#define VERSION_HUnit "1.6.0.0"
+#endif /* VERSION_HUnit */
+#ifndef MIN_VERSION_HUnit
+#define MIN_VERSION_HUnit(major1,major2,minor) (\
+  (major1) <  1 || \
+  (major1) == 1 && (major2) <  6 || \
+  (major1) == 1 && (major2) == 6 && (minor) <= 0)
+#endif /* MIN_VERSION_HUnit */
 
 /* package text-1.2.3.0 */
 #ifndef VERSION_text
@@ -243,10 +254,10 @@
 #endif /* MIN_TOOL_VERSION_strip */
 
 #ifndef CURRENT_PACKAGE_KEY
-#define CURRENT_PACKAGE_KEY "BattleShips-0.1.0.0-IkQ3voCRHb66HGiskby0vU"
+#define CURRENT_PACKAGE_KEY "BattleShips-0.1.0.0-G4usVkG64sd4Pp90BHPOIc"
 #endif /* CURRENT_PACKAGE_KEY */
 #ifndef CURRENT_COMPONENT_ID
-#define CURRENT_COMPONENT_ID "BattleShips-0.1.0.0-IkQ3voCRHb66HGiskby0vU"
+#define CURRENT_COMPONENT_ID "BattleShips-0.1.0.0-G4usVkG64sd4Pp90BHPOIc"
 #endif /* CURRENT_COMPONENT_ID */
 #ifndef CURRENT_PACKAGE_VERSION
 #define CURRENT_PACKAGE_VERSION "0.1.0.0"

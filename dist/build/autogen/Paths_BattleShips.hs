@@ -29,12 +29,12 @@ version :: Version
 version = Version [0,1,0,0] []
 bindir, libdir, dynlibdir, datadir, libexecdir, sysconfdir :: FilePath
 
-bindir     = "C:\\Users\\tvari\\AppData\\Roaming\\cabal\\bin"
-libdir     = "C:\\Users\\tvari\\AppData\\Roaming\\cabal\\x86_64-windows-ghc-8.4.3\\BattleShips-0.1.0.0-IkQ3voCRHb66HGiskby0vU"
-dynlibdir  = "C:\\Users\\tvari\\AppData\\Roaming\\cabal\\x86_64-windows-ghc-8.4.3"
-datadir    = "C:\\Users\\tvari\\AppData\\Roaming\\cabal\\x86_64-windows-ghc-8.4.3\\BattleShips-0.1.0.0"
-libexecdir = "C:\\Users\\tvari\\AppData\\Roaming\\cabal\\BattleShips-0.1.0.0-IkQ3voCRHb66HGiskby0vU\\x86_64-windows-ghc-8.4.3\\BattleShips-0.1.0.0"
-sysconfdir = "C:\\Users\\tvari\\AppData\\Roaming\\cabal\\etc"
+bindir     = "C:\\Users\\tvari\\Desktop\\Haskell\\battle\\BattleShips\\.cabal-sandbox\\bin"
+libdir     = "C:\\Users\\tvari\\Desktop\\Haskell\\battle\\BattleShips\\.cabal-sandbox\\x86_64-windows-ghc-8.4.3\\BattleShips-0.1.0.0-G4usVkG64sd4Pp90BHPOIc"
+dynlibdir  = "C:\\Users\\tvari\\Desktop\\Haskell\\battle\\BattleShips\\.cabal-sandbox\\x86_64-windows-ghc-8.4.3"
+datadir    = "C:\\Users\\tvari\\Desktop\\Haskell\\battle\\BattleShips\\.cabal-sandbox\\x86_64-windows-ghc-8.4.3\\BattleShips-0.1.0.0"
+libexecdir = "C:\\Users\\tvari\\Desktop\\Haskell\\battle\\BattleShips\\.cabal-sandbox\\BattleShips-0.1.0.0-G4usVkG64sd4Pp90BHPOIc\\x86_64-windows-ghc-8.4.3\\BattleShips-0.1.0.0"
+sysconfdir = "C:\\Users\\tvari\\Desktop\\Haskell\\battle\\BattleShips\\.cabal-sandbox\\etc"
 
 getBinDir, getLibDir, getDynLibDir, getDataDir, getLibexecDir, getSysconfDir :: IO FilePath
 getBinDir = catchIO (getEnv "BattleShips_bindir") (\_ -> return bindir)

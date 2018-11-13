@@ -1,6 +1,11 @@
 .stack-work/
+HUnit-1.6.0.0/
+vector/
 BattleShips.cabal
+dist/
+dist\
 *~
 dist/package.conf.inplace/package.cache
 dist/setup-config
 dist/package.conf.inplace/BattleShips-0.1.0.0-IkQ3voCRHb66HGiskby0vU.conf
+dist/build/
